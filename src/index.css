@@ -1,0 +1,369 @@
+
+/*warning overlay*/
+#webpack-dev-server-client-overlay-div{
+  display: none;
+}
+
+
+
+#disappear{
+  display: none;
+  padding: 20px;
+}
+
+/*logo section*/
+#logo {
+  z-index: 2;
+  height: 4em;
+  width: 4em;
+  padding: .2em .2em;
+  background-color:#6c757d;
+  border: .5px solid black;
+}
+
+#headerPhoto{
+  display:inline-flexbox;
+  height: 4em;
+  width: 4em;
+  margin-left: 0px;
+  margin-right: 0px;
+  justify-self: right;
+  overflow: hidden;
+}
+
+#photoContainer{
+  margin: 0 auto;
+  justify-items: flex-end;
+  overflow: hidden;
+}
+
+.dark #photoContainer{
+  z-index: -1;
+} 
+
+#website{
+  display: inline-flex; 
+  align-self: center;
+  width: 90%;
+  
+}
+
+/*drop down animation*/
+.dropdown{
+  position: static;
+  color:transparent;
+  border-color:transparent;
+  background-color: transparent;
+  background-image: url(./images/191773.png);
+  background-size: contain;
+  background-repeat:no-repeat;
+  outline: none;
+  height: 3.5em;
+  width: 3.5em;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 0.8em;
+}
+/*drop down animation*/
+.dropdown:hover .dropdown-content-container{
+  position: absolute;
+  left: -10px;
+  top: 0em;
+  width: 3.5em;
+  height: 100%;
+  overflow:visible;
+  transition: width 2s;
+  transition-delay: width 1s;
+}
+/*drop texts*/
+/*.dropdown:hover p{
+      color:black;
+    }*/
+
+    .dropdown:hover #sidebarFirst{
+      color: black;
+      transition-property: color;
+      transition-duration: 500ms;
+      transition-delay: 500ms; 
+    }
+
+    .dropdown:hover #sidebarThird{
+      color: black;
+      transition-property: color;
+      transition-duration: 500ms;
+      transition-delay: 800ms; 
+    }
+    .dropdown:hover #sidebarFourth{
+      color:black;
+      transition-property: color;
+      transition-duration: 500ms;
+      transition-delay: 1200ms; 
+    }
+  
+    .dropdown:hover #sidebarSecond{
+      color:white;
+      transition-property: color;
+      transition-duration: 500ms;
+      transition-delay: 1600ms; 
+    }
+
+.dropdown-content-container{
+    display: block;
+    background-color: rgba(8, 82, 241, 0.897);
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    align-content: flex-end;
+    z-index: 1;
+    justify-content: center;
+}
+
+/*text display*/
+p{
+    position: relative;
+    /*color: rgba(24, 19, 19, 0);*/
+    background-color: transparent;
+    transition-delay: block 3s;
+    font-size: .7em;
+    margin-left: 10px;
+}
+
+
+#sidebarFirst{
+    top: 7em;
+}
+
+#sidebarSecond{
+    top: 8em;
+}
+
+#sidebarThird{
+  top: 9em;
+}  
+
+#sidebarFourth{
+  top: 8em;
+}
+
+
+section{
+  display: flex;
+  background-color: gray;
+  align-self: center;
+  padding: 0.7em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,700;1,900&family=Oxygen:wght@300;400;700&display=swap');
+/*overall layout*/
+.layout-container{
+  display: flexbox;
+  position: relative;
+  width: 100%;
+  overflow: none;
+}
+
+
+/*HEADER information */
+header {
+  display: flex;
+  min-width: 520px;
+  font-weight: bold;
+  background-color: hsl(25deg 51% 57%);
+  color:black;
+  font-family:'Abril Fatface';
+  height: 4em;
+  width: inherit;
+  text-align: center;
+  overflow:hidden;
+  font-size: 2em;
+  border: 0px 0px 3px 0px  solid black;
+  border-top: 0px solid black;
+  justify-items: stretch;
+  justify-self: stretch;
+}
+
+.dark header {
+  background-color: hsl(210deg 6% 24% / 89%);
+
+}
+
+.toggleDark {
+  width: 1em;
+  background-color: transparent;
+  border: none;
+  background-image: url(./images/moon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  
+}
+
+.dark .toggleDark {
+  background-image: none;
+  background-image: url(./images/moonlight.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+header div {
+  align-self: center;
+  margin-left: 5px;
+}
+
+.headerPhoto {
+  background-image: url(./images/DSC_0635.JPG);
+  z-index: 3;
+  height: 5em;
+  width: 7em;
+  margin-right: 0px;
+  background-size: contain;
+  background-repeat:no-repeat;
+
+}
+
+
+nav {
+  display: inline-flex;
+  height: 2em;
+  min-width: 520px;
+  background-color:hsl(20deg 75% 81%);
+  width: 100%;
+  border-top: .2px solid black;
+}
+
+.dark nav {
+  background-color:hsl(209deg 7% 13%);
+}
+/*navigation bar*/
+
+
+/*links*/
+nav a{
+  position: relative;
+  margin: 0 auto;
+  color:rgb(10, 9, 9);
+  transition: color 700ms;
+  transition: font-size ease-in 300ms;
+}
+
+.dark nav a{
+  color:hsl(0deg 5% 57%);
+}
+
+a:hover{
+  color:turquoise;
+  font-size: 1.15em;
+  text-decoration:none;
+  transition: color 500ms;
+  transition: font-size ease-out 300ms;
+}
+
+.dark a:hover{
+  color:#0c5460;
+}
+
+/*links*/
+body{
+  display: flexbox;
+  /*background-color: gray;*/
+  background-color: hsl(20deg 75% 84%);
+  margin: 0px;
+  /*background-image: url(https://images.pexels.com/photos/816608/pexels-photo-816608.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940); 
+  */
+  background-image: url(./images/DSC_0513.JPG);
+  background-size:cover;
+  background-repeat:repeat;  
+
+  
+}
+
+h3{
+  margin: 4% 7%;
+  color:cornsilk;
+  background-color:rgba(95, 158, 160, 0.904);
+ /* padding:2% 7%;*/
+  font-family: oxygen, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  text-align:center;
+}
+
+.dark h3{
+  color: hsl(311deg 7% 66%);
+  background-color: hsl(182deg 25% 10% / 90%)
+} 
+
+
+.container{
+display: inline-block;/*flow-root;
+height: 100%;
+width: 100%;
+margin: 0 auto;
+align-items: center;
+max-width: 100%;*/
+
+}
+
+/*Footer Section*/
+footer{
+  /*margin-top: 1.5em;*/
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color:hsl(20deg 75% 84% / 80%);
+  
+}
+
+.dark footer{
+  background-color:hsl(210deg 6% 24%)
+}
+
+.cred{
+  color: black
+}
+
+ a.cred:hover{
+  color: black;
+  font-size: 1em;
+  text-decoration:none;
+  transition: none;
+}
+
+footer>div{
+  color:rgb(0, 8, 6);
+  padding: 0em 2em 0.1em 2em;
+}
+
+@media only screen and (max-width: 488px) {
+
+  header{
+      min-width: 100px;
+      max-width: 100%;
+      font-size: 16px;
+      height: 3.5rem;
+  }
+  .dropdown{
+      margin-top: 0.5em;
+  }
+
+  .dropdown-content-container p{
+      display:none    
+  }
+
+  nav{
+      min-width: 100px;
+      max-width: 100%;
+      font-size: 16px;
+}
+  .container{
+      padding: .3rem;
+      max-width: 100%;
+  }
+
+  .dropdown:hover .dropdown-content-container{
+      display: none;
+  }
+
+
+
+}

@@ -1,0 +1,260 @@
+
+.windowStats{
+    display: inline;
+    font-size: 1em;
+}
+
+.counter{
+    position:absolute;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.4em;
+    left: 16%;
+    text-align: center;
+    text-justify: center;
+    width:70%;
+    height: 30px;
+    background-color:#c98859;
+    color:#090909;
+    border: 0.5px solid black;
+    border-radius: 2px;
+  }
+
+  .dark .counter{
+      background-color: hsl(210deg 6% 24%); 
+  }
+
+.help-display{
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    height: 0px;
+    color: transparent;
+    background: white;
+
+}
+
+.container{
+overflow: hidden;
+display: inline-block;
+
+}
+
+
+/* body of website, mostly gameboard*/
+
+.grid-item1 {
+    background-color:hsl(28deg 35% 48% / 77%);
+    border: 1.4px solid rgba(70, 51, 35, 0.77)
+
+}
+
+.dark .grid-item1 {
+    background-color:hsl(28deg 42% 16% / 77%);
+
+} 
+
+.Playfield{
+    display: grid;
+    grid-template-columns: 11.31% 11.31% 11.31% 11.31% 11.31% 11.31% 11.11% 11.11% 11.11%;
+    grid-template-rows: 11.31% 11.31% 11.31% 11.31% 11.31% 11.31% 11.11% 11.11% 11.11%;
+    height: 100%;
+    width: 100%;
+    /*background-image: url(./images/checkeredBoard.gif);*/
+    background-size: contain;
+    border: 6px solid rgb(116, 47, 1);
+}
+
+.dark .Playfield{
+    background-image: none;
+    border: 6px solid hsl(24deg 60% 16%);
+
+}
+.background-grid {
+    display: flex;
+    position: relative;
+    top: 1em;
+    max-height: 500px;
+    max-width: 450px;
+    width: 29.8rem;
+    height: auto;
+    /*max-height: 100%;
+    max-width:100%;*/
+    /*background-image: url(./images/checkeredBoard.gif);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Go-board{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 33rem;
+    padding: 5%;
+    background-image: url(./images/bamboo.jpg);
+    background-size:cover;
+    background-repeat:no-repeat; 
+}
+
+.dark #Go-board{
+    background-color: #000000d1;
+    background-image: none;
+    
+}
+
+#empty{
+
+    color: rgba(100, 0, 0, 0);
+    border-color:transparent;
+    background-color: transparent;
+}
+
+button:focus{
+    outline:none;
+}
+
+button.empty, button.black, button.white{
+    z-index: 1;
+    border-radius: 50%;
+    height: 80%;
+    width: 80%;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.black {
+    background-color: black;
+    color:beige;
+}
+
+.dark .black {
+    color: hsl(60deg 56% 23%);
+    border: 2.5px solid hsl(0deg 0% 28% / 90%);
+}
+
+.white {
+    border: 2px solid rgb(194, 194, 152);
+    background-color:darkgray;
+}
+
+.dark .white {
+    border: 2px solid hsl(60deg 26% 37%);
+    background-color: hsl(0deg 0% 30%);
+}
+
+.empty {
+    /*color: rgba(100, 0, 0, 0);*/
+    color:black;
+    border-color:transparent;
+    background-color: transparent;
+
+}
+
+@media only screen and (max-width: 1030px) {
+
+.background-grid {
+    max-width: 465px;
+    /*max-height: 100%;
+    max-width:100%;*/
+}
+}
+
+@media only screen and (max-width: 488px) {
+
+    html{
+        height: 100%;
+    }
+
+    button {
+        font-size: 3em;
+    }
+
+    .background-grid {
+        width: 20rem;
+        height: 21rem;
+        font-size: 0.3em;
+        background-size: contain;
+    }
+
+    .Playfield{
+        grid-template-columns: 11.31% 11.31% 11.31% 11.31% 11.31% 11.31% 11.11% 11.11% 11.11%;
+        grid-template-rows: 11.31% 11.31% 11.31% 11.31% 11.31% 11.31% 11.11% 11.11% 11.11%;
+    }
+
+    #Go-board{
+        display: flex;
+        width: 100%;
+        height: 50rem;
+        padding: 16%; 
+    }
+
+    header{
+        min-width: 100px;
+        max-width: 100%;
+        font-size: 16px;
+        height: 3.5rem;
+    }
+    .dropdown{
+        margin-top: 0.5em;
+    }
+
+    .dropdown-content-container p{
+        display:none    
+    }
+
+    nav{
+        min-width: 100px;
+        max-width: 100%;
+        font-size: 16px;
+}
+    .container{
+        padding: .3rem;
+        max-width: 100%;
+    }
+
+    .grid-item1{
+        margin: 0%;
+    }
+
+    #light, #dark, #dark1, #try, #empty {
+        z-index: 1;
+        border-radius: 50%;
+        height: 91%;
+        width: 92%;
+        margin: 6.5% 1%;
+    }
+
+    .dropdown:hover .dropdown-content-container{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+
+.background-grid{
+width: 16rem;
+height: 16.4rem;
+font-size: 0.2em;
+}
+
+a{
+    font-size: 0.9rem;
+}
+
+
+
+a:hover {
+    color: black;
+    text-decoration: none;
+    transition: none;
+
+
+}
+
+a:active {
+    color: black;
+    text-decoration: none;
+    transition: none;
+    position: relative;
+
+}
+}
